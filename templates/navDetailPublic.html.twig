@@ -1,6 +1,6 @@
 {% trans_default_domain 'mainNavBarPublic' %}
 <li class="{% if  activePage=="main"%}uk-active{% endif %}">
-    <a class="uk-logo" title="WildCircus" href="{{ path('main')}}">
-        <span class="fas fa-home uk-margin-small-right"></span>
+    <a class="{% if activePage=="main" %}uk-active{% endif %}" href="{{ path('main')}}">
+        <img data-src="{{ asset('build/images/site/bigTop.png') }}" width="50" height="50" alt="WildCircus" uk-img>
     </a>
 </li>

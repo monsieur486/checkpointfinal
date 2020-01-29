@@ -4,8 +4,8 @@
         <nav class="uk-navbar uk-navbar-container uk-dark" data-uk-navbar>
             <div class="uk-navbar-left">
                 <div class="uk-navbar-item uk-hidden@l">
-                    <a class="degrade uk-logo {% if activePage=="main" %}uk-active{% endif %}" title="WildCircus" href="{{ path('main')}}">
-                        <span class="fas fa-home uk-margin-small-right"></span>
+                    <a class="{% if activePage=="main" %}uk-active{% endif %}" href="{{ path('main')}}">
+                        <img data-src="{{ asset('build/images/site/bigTop.png') }}" width="50" height="50" alt="WildCircus" uk-img>
                     </a>
                 </div>
                 <div class="uk-visible@l">
