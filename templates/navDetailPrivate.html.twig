@@ -1,34 +1,12 @@
-{#{% if is_granted('IS_AUTHENTICATED_FULLY') %}#}
-{#    {% if is_granted('ROLE_ADMIN') %}#}
-{#        <li>#}
-{#            <a href="{{ path('bo_admin_index') }}">{% trans %}mainNavBarPrivate.mySpace{% endtrans %}</a></li>#}
-{#    {% endif %}#}
-{#    {% if is_granted('ROLE_DONATEUR') %}#}
-{#        <li>#}
-{#            <a href="{{ path('bo_donor_index') }}">{% trans %}mainNavBarPrivate.mySpace{% endtrans %}</a></li>#}
-{#    {% endif %}#}
-{#    {% if is_granted('ROLE_ACTEUR') %}#}
-{#        <li>#}
-{#            <a href="{{ path('bo_actor_index') }}">{% trans %}mainNavBarPrivate.mySpace{% endtrans %}</a></li>#}
-{#    {% endif %}#}
-{#    {% if is_granted('ROLE_MODERATEUR') %}#}
-{#        <li>#}
-{#            <a href="{{ path('bo_moderator_index') }}">{% trans %}mainNavBarPrivate.mySpace{% endtrans %}</a></li>#}
-{#    {% endif %}#}
-{#    {% if is_granted('ROLE_REDACTEUR') %}#}
-{#        <li>#}
-{#            <a href="{{ path('bo_editor_index') }}">{% trans %}mainNavBarPrivate.mySpace{% endtrans %}</a></li>#}
-{#    {% endif %}#}
-{#    <li><a href="{{ path('app_logout') }}">{% trans %}mainNavBarPrivate.Logout{% endtrans %}</a></li>#}
-{#{% else %}#}
-{#    <li {% if activePage=="login" %}class="uk-active"{% endif %}>#}
-{#        <a href="{{ path('app_login') }}">{% trans %}mainNavBarPrivate.Login{% endtrans %}</a>#}
-{#    </li>#}
-{#    <li {% if activePage=="register" %}class="uk-active"{% endif %}>#}
-{#        <a  href="{{ path('register')}}">{% trans %}mainNavBarPrivate.Register{% endtrans %}</a>#}
-{#    </li>#}
-{#{% endif %}#}
-
-<li class="degrade {% if activePage=="programme" %}uk-active{% endif %}">
-    <a  href="{{ path('main')}}"><span class="fas fa-user-lock" uk-tooltip="Connexion"></span></a>
-</li>
+{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    {% if is_granted('ROLE_ADMIN') %}
+        <li>
+            <a href="{{ path('main') }}">Administration</a>
+        </li>
+    {% endif %}
+    <li><a href="{{ path('app_logout') }}">Déconnexion</a></li>
+{% else %}
+    <li class="degrade {% if activePage=="login" %}uk-active{% endif %}">
+        <a  href="{{ path('app_login')}}"><span class="fas fa-user-lock" uk-tooltip="Connexion"></span></a>
+    </li>
+{% endif %}
