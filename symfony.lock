@@ -659,6 +659,9 @@
     "twig/twig": {
         "version": "v3.0.1"
     },
+    "uikit/uikit": {
+        "version": "v3.2.7"
+    },
     "webmozart/assert": {
         "version": "1.6.0"
     },

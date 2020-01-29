@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1723d06cf80da959fc83870e9365813a",
+    "content-hash": "239088f4a18750beb1da9ea927f9849f",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -6284,6 +6284,34 @@
                 "templating"
             ],
             "time": "2019-12-28T07:17:28+00:00"
+        },
+        {
+            "name": "uikit/uikit",
+            "version": "v3.2.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/uikit/uikit.git",
+                "reference": "23e0a143b282a4a23504cf7231e5358c25d96a39"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/uikit/uikit/zipball/23e0a143b282a4a23504cf7231e5358c25d96a39",
+                "reference": "23e0a143b282a4a23504cf7231e5358c25d96a39",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "UIkit is a lightweight and modular front-end framework for developing fast and powerful web interfaces.",
+            "homepage": "https://getuikit.com/",
+            "time": "2020-01-13T08:51:43+00:00"
         },
         {
             "name": "webmozart/assert",
