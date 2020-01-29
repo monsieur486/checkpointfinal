@@ -1,12 +1,12 @@
 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
     {% if is_granted('ROLE_ADMIN') %}
-        <li>
-            <a href="{{ path('main') }}">Administration</a>
+        <li class="{% if activePage=="admin" %}uk-active{% else %}degrade{% endif %}">
+            <a href="{{ path('administration') }}">Administration</a>
         </li>
     {% endif %}
-    <li><a href="{{ path('app_logout') }}">Déconnexion</a></li>
+    <li class="degrade"><a href="{{ path('app_logout') }}">Déconnexion</a></li>
 {% else %}
-    <li class="degrade {% if activePage=="login" %}uk-active{% endif %}">
+    <li class="{% if activePage=="login" %}uk-active{% else %}degrade{% endif %}">
         <a  href="{{ path('app_login')}}"><span class="fas fa-user-lock" uk-tooltip="Connexion"></span></a>
     </li>
 {% endif %}

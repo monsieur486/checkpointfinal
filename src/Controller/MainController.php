@@ -16,4 +16,24 @@ class MainController extends AbstractController
             'activePage' => 'main',
         ]);
     }
+
+    /**
+     * @Route("/programme", name="programme")
+     */
+    public function programme()
+    {
+        return $this->render('main/programme.html.twig', [
+            'activePage' => 'programme',
+        ]);
+    }
+
+    /**
+     * @Route("/contact", name="contact")
+     */
+    public function contact()
+    {
+        return $this->render('main/contact.html.twig', [
+            'activePage' => 'contact',
+        ]);
+    }
 }

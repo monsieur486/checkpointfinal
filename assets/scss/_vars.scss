@@ -1,6 +1,7 @@
 $navbar-wild-main-color : #ff4f3b;
 $navbar-wild-main-hover : #d8b415;
 $navbar-wild-main-active : #d8b415;
+$navbar-wild-main-click : #ffffff;
 
 
 $global-margin: 20px !default;
@@ -64,7 +65,7 @@ $global-muted-color: #999 !default;
 $article-meta-color: $global-muted-color !default;
 $inverse-global-muted-color: rgba($global-inverse-color, 0.5) !default;
 $inverse-article-meta-color: $inverse-global-muted-color !default;
-$global-background: #fff !default;
+$global-background: #ebebeb !default;
 $background-default-background: $global-background !default;
 $background-muted-background: $global-muted-background !default;
 $background-primary-background: $global-primary-background !default;

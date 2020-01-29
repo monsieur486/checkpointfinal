@@ -17,19 +17,32 @@
     font-size: 38px;
     font-weight: bold;
     font-family: 'Amatic SC', sans-serif;
-    color: #ff4f3b;
+    color: $navbar-wild-main-color;
     text-decoration: none;
 }
 
 .uk-navbar-nav > li > a:hover,
 .uk-navbar-item:hover,
 .uk-navbar-toggle:hover {
-    color: #d8b415;
+    color: $navbar-wild-main-hover;
+}
+
+/* OnClick */
+.uk-navbar-nav > li > a:active {
+    color: $navbar-wild-main-click;
+    @if(mixin-exists(hook-navbar-nav-item-onclick)) {@include hook-navbar-nav-item-onclick();}
+}
+
+/* Active */
+.uk-navbar-nav > li.uk-active > a {
+    color: $navbar-wild-main-active;
+    text-decoration: underline;
+    @if(mixin-exists(hook-navbar-nav-item-active)) {@include hook-navbar-nav-item-active();}
 }
 
 .nav {
     position: absolute;
-    top: 15px;
+    top: 0;
     z-index: 99;
     left: 0;
     right: 0;
@@ -99,4 +112,8 @@
     background: linear-gradient(90deg,#ff4f3b,  #d8b415);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+degrade.a:hover {
+    color: $navbar-wild-main-hover;
 }
