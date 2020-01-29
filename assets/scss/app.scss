@@ -14,10 +14,17 @@
     box-sizing: border-box;
     min-height: $navbar-nav-item-height;
     padding: 0 $navbar-nav-item-padding-horizontal;
-    font-size: 22px;
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #28707D;
+    font-size: 38px;
+    font-weight: bold;
+    font-family: 'Amatic SC', sans-serif;
+    color: #ff4f3b;
     text-decoration: none;
+}
+
+.uk-navbar-nav > li > a:hover,
+.uk-navbar-item:hover,
+.uk-navbar-toggle:hover {
+    color: #d8b415;
 }
 
 .nav {
@@ -26,6 +33,11 @@
     z-index: 99;
     left: 0;
     right: 0;
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+    background: #2e3136;
+    color: #fff;
 }
 
 .uk-sticky-placeholder {

@@ -28,3 +28,7 @@
 {#        <a  href="{{ path('register')}}">{% trans %}mainNavBarPrivate.Register{% endtrans %}</a>#}
 {#    </li>#}
 {#{% endif %}#}
+
+<li class="{% if activePage=="programme" %}uk-active{% endif %}">
+    <a  href="{{ path('main')}}">Programme</a>
+</li>
