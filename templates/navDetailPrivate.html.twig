@@ -29,6 +29,6 @@
 {#    </li>#}
 {#{% endif %}#}
 
-<li class="{% if activePage=="programme" %}uk-active{% endif %}">
-    <a  href="{{ path('main')}}">Programme</a>
+<li class="degrade {% if activePage=="programme" %}uk-active{% endif %}">
+    <a  href="{{ path('main')}}"><span class="fas fa-user-lock" uk-tooltip="Connexion"></span></a>
 </li>

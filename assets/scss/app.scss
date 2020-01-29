@@ -93,3 +93,10 @@
     margin: 0 auto;
     filter:  grayscale(0);
 }
+
+.degrade {
+    font-weight: bold;
+    background: linear-gradient(90deg,#ff4f3b,  #d8b415);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
