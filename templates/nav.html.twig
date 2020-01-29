@@ -3,11 +3,13 @@
     <div class="uk-container uk-container-expand uk-dark uk-padding-remove">
         <nav class="uk-navbar uk-navbar-container uk-box-shadow-large" data-uk-navbar>
             <div class="uk-navbar-left">
-                <div class="uk-navbar-item uk-hidden@l">
-                    <a class="uk-logo {% if activePage=="main" %}uk-active{% endif %}" alt="WildCircus" href="{{ path('main')}}">
-                        <span class="fas fa-home" uk-tooltip="Accueil"></span>
-                    </a>
-                </div>
+                <ul class="uk-navbar-nav uk-hidden@l">
+                    <li>
+                        <a class="degrade {% if activePage=="main" %}uk-active{% endif %}" href="{{ path('main')}}">
+                            <span class="fas fa-home" uk-tooltip="Accueil"></span>
+                        </a>
+                    </li>
+                </ul>
                 <div class="uk-visible@l">
                     <ul class="uk-navbar-nav">
                         {% include 'navDetailPublic.html.twig' %}
