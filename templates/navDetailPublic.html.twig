@@ -8,6 +8,10 @@
     <a  href="{{ path('programme')}}">Programme</a>
 </li>
 
+<li class="{% if activePage=="reservation" %}uk-active{% else %}degrade{% endif %}">
+    <a  href="{{ path('reservation')}}">Réservations</a>
+</li>
+
 <li class="{% if activePage=="contact" %}uk-active{% else %}degrade{% endif %}">
     <a  href="{{ path('contact')}}">Contact</a>
 </li>

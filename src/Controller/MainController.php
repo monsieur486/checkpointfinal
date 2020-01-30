@@ -36,4 +36,14 @@ class MainController extends AbstractController
             'activePage' => 'contact',
         ]);
     }
+
+    /**
+     * @Route("/reservation", name="reservation")
+     */
+    public function reservation()
+    {
+        return $this->render('main/reservation.html.twig', [
+            'activePage' => 'reservation',
+        ]);
+    }
 }

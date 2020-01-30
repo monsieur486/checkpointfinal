@@ -27,7 +27,7 @@
         {% for circuit in circuits %}
             <tr>
                 <td>{{ circuit.id }}</td>
-                <td>{{ circuit.datePresentation ? circuit.datePresentation|date('Y-m-d') : '' }}</td>
+                <td>{{ circuit.datePresentation ? circuit.datePresentation|date('d-m-Y') : '' }}</td>
                 <td>{{ circuit.ville }}</td>
                 <td>{{ circuit.places }}</td>
                 <td>{{ circuit.slug }}</td>
