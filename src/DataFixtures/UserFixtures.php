@@ -2,6 +2,7 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Tarif;
 use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
@@ -24,6 +25,15 @@ class UserFixtures extends Fixture implements OrderedFixtureInterface
         $userSite->setRoles(['ROLE_ADMIN']);
         $userSite->setPassword($this->passwordEncoder->encodePassword($userSite, 'Mdp12345'));
         $manager->persist($userSite);
+
+        $tarif = new Tarif();
+        $tarif->setSemaineAdulte(5);
+        $tarif->setSemaineEnfant(3.5);
+        $tarif->setSemaineGroupe(4);
+        $tarif->setWeekendAdulte(8);
+        $tarif->setWeekendEnfant(4);
+        $tarif->setWeekendGroupe(5);
+        $manager->persist($tarif);
 
         $manager->flush();
     }
