@@ -9,6 +9,11 @@
 2. `composer install && yarn install`
 3. `php bin/console doctrine:fixtures:load`
 
+### Connexion :
+
+Login : admin@wildcircus.com
+Mot de passe : Mdp12345
+
 ### Validation du code
 
 Validateur de code : [https://travis-ci.com](https://travis-ci.com).
