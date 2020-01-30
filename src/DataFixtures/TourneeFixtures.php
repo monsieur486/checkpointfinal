@@ -18,7 +18,7 @@ class TourneeFixtures extends Fixture implements OrderedFixtureInterface
         $fakeMaker= new FakeMaker();
         $slugify = new Slugify();
 
-        for ($ind = 1; $ind <= 50; $ind++) {
+        for ($ind = 1; $ind <= 10; $ind++) {
             $circuit = new Circuit();
             $circuit->setDatePresentation($faker->dateTimeThisCentury);
             $circuit->setPlaces(200);
@@ -27,6 +27,21 @@ class TourneeFixtures extends Fixture implements OrderedFixtureInterface
             $circuit->setVille($faker->city);
             $circuit->setResume($fakeMaker->fakeArticle(1));
             $circuit->setActif(true);
+            $circuit->setLatitude(48.574093);
+            $circuit->setLongitude(7.7622913);
+            $circuit->setSlug($slugify->slugify($circuit->getDatePresentation()->format('Y-m-d').'-'.$circuit->getVille()));
+            $manager->persist($circuit);
+        }
+
+        for ($ind = 1; $ind <= 30; $ind++) {
+            $circuit = new Circuit();
+            $circuit->setDatePresentation($faker->dateTimeThisCentury);
+            $circuit->setPlaces(200);
+            $circuit->setAdresse01($faker->streetAddress);
+            $circuit->setCodepostal($faker->postcode);
+            $circuit->setVille($faker->city);
+            $circuit->setResume($fakeMaker->fakeArticle(1));
+            $circuit->setActif(false);
             $circuit->setLatitude(48.574093);
             $circuit->setLongitude(7.7622913);
             $circuit->setSlug($slugify->slugify($circuit->getDatePresentation()->format('Y-m-d').'-'.$circuit->getVille()));

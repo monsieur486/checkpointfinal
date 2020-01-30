@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Circuit{% endblock %}
+
+{% block body %}
+    <h1>Circuit</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ circuit.id }}</td>
+            </tr>
+            <tr>
+                <th>DatePresentation</th>
+                <td>{{ circuit.datePresentation ? circuit.datePresentation|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ circuit.ville }}</td>
+            </tr>
+            <tr>
+                <th>Places</th>
+                <td>{{ circuit.places }}</td>
+            </tr>
+            <tr>
+                <th>Slug</th>
+                <td>{{ circuit.slug }}</td>
+            </tr>
+            <tr>
+                <th>Adresse01</th>
+                <td>{{ circuit.adresse01 }}</td>
+            </tr>
+            <tr>
+                <th>Adresse02</th>
+                <td>{{ circuit.adresse02 }}</td>
+            </tr>
+            <tr>
+                <th>Codepostal</th>
+                <td>{{ circuit.codepostal }}</td>
+            </tr>
+            <tr>
+                <th>Longitude</th>
+                <td>{{ circuit.longitude }}</td>
+            </tr>
+            <tr>
+                <th>Latitude</th>
+                <td>{{ circuit.latitude }}</td>
+            </tr>
+            <tr>
+                <th>Resume</th>
+                <td>{{ circuit.resume }}</td>
+            </tr>
+            <tr>
+                <th>Actif</th>
+                <td>{{ circuit.actif ? 'Yes' : 'No' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('circuit_index') }}">back to list</a>
+
+    <a href="{{ path('circuit_edit', {'id': circuit.id}) }}">edit</a>
+
+    {{ include('circuit/_delete_form.html.twig') }}
+{% endblock %}

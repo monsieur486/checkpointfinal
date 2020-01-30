@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tarif{% endblock %}
+
+{% block body %}
+    <h1>Tarif</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ tarif.id }}</td>
+            </tr>
+            <tr>
+                <th>SemaineEnfant</th>
+                <td>{{ tarif.semaineEnfant }}</td>
+            </tr>
+            <tr>
+                <th>SemaineAdulte</th>
+                <td>{{ tarif.semaineAdulte }}</td>
+            </tr>
+            <tr>
+                <th>WeekendEnfant</th>
+                <td>{{ tarif.weekendEnfant }}</td>
+            </tr>
+            <tr>
+                <th>WeekendAdulte</th>
+                <td>{{ tarif.weekendAdulte }}</td>
+            </tr>
+            <tr>
+                <th>SemaineGroupe</th>
+                <td>{{ tarif.semaineGroupe }}</td>
+            </tr>
+            <tr>
+                <th>WeekendGroupe</th>
+                <td>{{ tarif.weekendGroupe }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('tarif_index') }}">back to list</a>
+
+    <a href="{{ path('tarif_edit', {'id': tarif.id}) }}">edit</a>
+
+    {{ include('tarif/_delete_form.html.twig') }}
+{% endblock %}

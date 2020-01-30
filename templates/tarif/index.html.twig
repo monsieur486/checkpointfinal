@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tarif index{% endblock %}
+
+{% block body %}
+    <h1>Tarif index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>SemaineEnfant</th>
+                <th>SemaineAdulte</th>
+                <th>WeekendEnfant</th>
+                <th>WeekendAdulte</th>
+                <th>SemaineGroupe</th>
+                <th>WeekendGroupe</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for tarif in tarifs %}
+            <tr>
+                <td>{{ tarif.id }}</td>
+                <td>{{ tarif.semaineEnfant }}</td>
+                <td>{{ tarif.semaineAdulte }}</td>
+                <td>{{ tarif.weekendEnfant }}</td>
+                <td>{{ tarif.weekendAdulte }}</td>
+                <td>{{ tarif.semaineGroupe }}</td>
+                <td>{{ tarif.weekendGroupe }}</td>
+                <td>
+                    <a href="{{ path('tarif_show', {'id': tarif.id}) }}">show</a>
+                    <a href="{{ path('tarif_edit', {'id': tarif.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('tarif_new') }}">Create new</a>
+{% endblock %}

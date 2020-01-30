@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Numero{% endblock %}
+
+{% block body %}
+    <h1>Numero</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ numero.id }}</td>
+            </tr>
+            <tr>
+                <th>Actif</th>
+                <td>{{ numero.actif ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Horaire</th>
+                <td>{{ numero.horaire ? numero.horaire|date('H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ numero.titre }}</td>
+            </tr>
+            <tr>
+                <th>Resume</th>
+                <td>{{ numero.resume }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ numero.image }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('numero_index') }}">back to list</a>
+
+    <a href="{{ path('numero_edit', {'id': numero.id}) }}">edit</a>
+
+    {{ include('numero/_delete_form.html.twig') }}
+{% endblock %}
