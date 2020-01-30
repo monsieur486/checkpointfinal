@@ -17,7 +17,7 @@ class NumeroFixtures extends Fixture implements OrderedFixtureInterface
 
         $numero = new Numero();
         $numero->setActif(true);
-        $numero->setHoraire(DateTime::createFromFormat('H:m', "21:30"));
+        $numero->setHoraire(DateTime::createFromFormat('H:m', "20:30"));
         $numero->setTitre('Clown en folie');
         $numero->setResume($fakeMaker->fakeArticle(3));
         $numero->setImage('/media/images/piste01.jpg');
@@ -25,7 +25,7 @@ class NumeroFixtures extends Fixture implements OrderedFixtureInterface
 
         $numero = new Numero();
         $numero->setActif(true);
-        $numero->setHoraire(DateTime::createFromFormat('H:m', "21:30"));
+        $numero->setHoraire(DateTime::createFromFormat('H:m', "21:00"));
         $numero->setTitre('Les Trapésistes Fous');
         $numero->setResume($fakeMaker->fakeArticle(3));
         $numero->setImage('/media/images/piste01.jpg');
@@ -33,7 +33,7 @@ class NumeroFixtures extends Fixture implements OrderedFixtureInterface
 
         $numero = new Numero();
         $numero->setActif(true);
-        $numero->setHoraire(DateTime::createFromFormat('H:m', "21:30"));
+        $numero->setHoraire(DateTime::createFromFormat('H:m', "21:45"));
         $numero->setTitre('Les Trapésistes Fous');
         $numero->setResume($fakeMaker->fakeArticle(3));
         $numero->setImage('/media/images/piste01.jpg');
@@ -41,8 +41,16 @@ class NumeroFixtures extends Fixture implements OrderedFixtureInterface
 
         $numero = new Numero();
         $numero->setActif(true);
-        $numero->setHoraire(DateTime::createFromFormat('H:m', "21:30"));
+        $numero->setHoraire(DateTime::createFromFormat('H:m', "22:30"));
         $numero->setTitre('Jojo le Magicien');
+        $numero->setResume($fakeMaker->fakeArticle(3));
+        $numero->setImage('/media/images/piste01.jpg');
+        $manager->persist($numero);
+
+        $numero = new Numero();
+        $numero->setActif(false);
+        $numero->setHoraire(DateTime::createFromFormat('H:m', "22:30"));
+        $numero->setTitre('Momo le contortioniste');
         $numero->setResume($fakeMaker->fakeArticle(3));
         $numero->setImage('/media/images/piste01.jpg');
         $manager->persist($numero);
