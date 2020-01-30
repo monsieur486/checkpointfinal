@@ -35,9 +35,17 @@
 
 /* Active */
 .uk-navbar-nav > li.uk-active > a {
-    color: $navbar-wild-main-active;
-    text-decoration: underline;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ffff00, #ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     @if(mixin-exists(hook-navbar-nav-item-active)) {@include hook-navbar-nav-item-active();}
+}
+.degrade {
+    font-weight: bold;
+    background: linear-gradient(90deg, #ffff00, #ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav {
@@ -82,10 +90,6 @@
     z-index: 2;
 }
 
-.uk-logo img {
-    height: 38px;
-}
-
 .subtitle-text {
     font-size: 1.2em;
     opacity: 0.7;
@@ -107,13 +111,6 @@
     filter:  grayscale(0);
 }
 
-.degrade {
-    font-weight: bold;
-    background: linear-gradient(90deg,#ff4f3b,  #d8b415);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-degrade.a:hover {
-    color: $navbar-wild-main-hover;
+.firstsection {
+    padding-top: 100px;
 }
