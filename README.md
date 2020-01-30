@@ -11,8 +11,21 @@
 
 ### Connexion :
 
-Login : admin@wildcircus.com
-Mot de passe : Mdp12345
+#### Login :
+
+`admin@wildcircus.com`
+
+#### Mot de passe :
+
+`Mdp12345`
+
+### Caractéristiques et méthodes utilisées
+
+* framework css/scss : [uikit](https://getuikit.com/) pour le responsive
+* fixtures générées avec un bundle [Faker](https://packagist.org/packages/fzaninotto/faker)
+* [pagination](https://packagist.org/packages/knplabs/knp-paginator-bundle)
+* validation des formulaires par token csrf
+* protection des pages d'administration avec renvoi automatique vers l'authentification en cas de non connexion
 
 ### Validation du code
 
@@ -61,6 +74,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-## Acknowledgments
-
