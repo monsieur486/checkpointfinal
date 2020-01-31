@@ -21,7 +21,7 @@ class MainController extends AbstractController
      */
     public function index(WilderRepository $wilderRepository):Response
     {
-        $wilders = $wilderRepository->findAll();
+        $wilders = $wilderRepository->findBy([], ['firstName' => 'ASC']);
         return $this->render('main/index.html.twig', [
             'activePage' => 'main',
             'wilders'=> $wilders
