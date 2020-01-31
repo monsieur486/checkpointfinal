@@ -121,37 +121,12 @@
         </div>
         <div class="uk-container">
             <div class="uk-grid uk-grid-large uk-child-width-1-3@m" data-uk-grid data-uk-scrollspy="target: > div; delay: 150; cls: uk-animation-slide-bottom-medium">
+                {% for wilder in wilders %}
                 <div class="uk-text-center">
-                    <img data-src="{{ asset('media/images/main.jpg') }}" alt="" data-uk-img>
-                    <h4 class="uk-margin-small-bottom uk-margin-top uk-margin-remove-adjacent">Lorem ipsum dolor sit amet</h4>
-                    <p>24/7 support. We’re always here for you no matter what time of day.</p>
+                    <img data-src="{{ wilder.image }}" alt="" data-uk-img>
+                    <h4 class="uk-margin-small-bottom uk-margin-top uk-margin-remove-adjacent">{{ wilder.firstName }}</h4>
                 </div>
-                <div class="uk-text-center">
-                    <img data-src="{{ asset('media/images/main.jpg') }}" alt="" data-uk-img>
-                    <h4 class="uk-margin-small-bottom uk-margin-top uk-margin-remove-adjacent">Lorem ipsum dolor sit amet</h4>
-                    <p>24/7 support. We’re always here for you no matter what time of day.</p>
-                </div>
-                <div class="uk-text-center">
-                    <img data-src="{{ asset('media/images/main.jpg') }}" alt="" data-uk-img>
-                    <h4 class="uk-margin-small-bottom uk-margin-top uk-margin-remove-adjacent">Lorem ipsum dolor sit amet</h4>
-                    <p>24/7 support. We’re always here for you no matter what time of day.</p>
-                </div>
-                <div class="uk-text-center">
-                    <img data-src="{{ asset('media/images/main.jpg') }}" alt="" data-uk-img>
-                    <h4 class="uk-margin-small-bottom uk-margin-top uk-margin-remove-adjacent">Lorem ipsum dolor sit amet</h4>
-                    <p>24/7 support. We’re always here for you no matter what time of day.</p>
-                </div>
-                <div class="uk-text-center">
-                    <img data-src="{{ asset('media/images/main.jpg') }}" alt="" data-uk-img>
-                    <h4 class="uk-margin-small-bottom uk-margin-top uk-margin-remove-adjacent">Lorem ipsum dolor sit amet</h4>
-                    <p>24/7 support. We’re always here for you no matter what time of day.</p>
-                </div>
-                <div class="uk-text-center">
-                    <img data-src="{{ asset('media/images/main.jpg') }}" alt="" data-uk-img>
-                    <h4 class="uk-margin-small-bottom uk-margin-top uk-margin-remove-adjacent">Lorem ipsum dolor sit amet</h4>
-                    <p>24/7 support. We’re always here for you no matter what time of day.</p>
-                </div>
-
+                {% endfor %}
             </div>
         </div>
     </section>
