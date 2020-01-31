@@ -30,7 +30,7 @@ class AdminController extends AbstractController
     public function tarifs()
     {
         return $this->render('admin/tarif.html.twig', [
-            'activePage' => 'BOTarifs'
+            'activePage' => 'admin',
         ]);
     }
 
@@ -41,7 +41,7 @@ class AdminController extends AbstractController
     public function circuit()
     {
         return $this->render('admin/circuit.html.twig', [
-            'activePage' => 'BOCircuit'
+            'activePage' => 'admin',
         ]);
     }
 
@@ -52,7 +52,18 @@ class AdminController extends AbstractController
     public function programme()
     {
         return $this->render('admin/programme.html.twig', [
-            'activePage' => 'BOProgramme'
+            'activePage' => 'admin',
+        ]);
+    }
+
+    /**
+     * @Route("/wilder", name="BOWilder")
+     * @IsGranted("ROLE_ADMIN")
+     */
+    public function wilder()
+    {
+        return $this->render('admin/programme.html.twig', [
+            'activePage' => 'admin',
         ]);
     }
 }
