@@ -36,8 +36,8 @@
                 <td>{{ circuit.codepostal }}</td>
                 <td>{{ circuit.longitude }}</td>
                 <td>{{ circuit.latitude }}</td>
-                <td>{{ circuit.resume }}</td>
-                <td>{{ circuit.actif ? 'Yes' : 'No' }}</td>
+                <td>{{ circuit.resume|raw }}</td>
+                <td>{{ circuit.actif ? 'Oui' : 'Non' }}</td>
                 <td>
                     <a href="{{ path('circuit_show', {'id': circuit.id}) }}">show</a>
                     <a href="{{ path('circuit_edit', {'id': circuit.id}) }}">edit</a>

@@ -62,7 +62,7 @@ class AdminController extends AbstractController
      */
     public function wilder()
     {
-        return $this->render('admin/programme.html.twig', [
+        return $this->render('admin/wilder.html.twig', [
             'activePage' => 'admin',
         ]);
     }

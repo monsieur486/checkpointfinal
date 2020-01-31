@@ -9,12 +9,12 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>SemaineEnfant</th>
-                <th>SemaineAdulte</th>
-                <th>WeekendEnfant</th>
-                <th>WeekendAdulte</th>
-                <th>SemaineGroupe</th>
-                <th>WeekendGroupe</th>
+                <th>Semaine Enfant</th>
+                <th>Semaine Adulte</th>
+                <th>Semaine Groupe</th>
+                <th>Weekend Enfant</th>
+                <th>Weekend Adulte</th>
+                <th>Weekend Groupe</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -24,9 +24,9 @@
                 <td>{{ tarif.id }}</td>
                 <td>{{ tarif.semaineEnfant }}</td>
                 <td>{{ tarif.semaineAdulte }}</td>
+                <td>{{ tarif.semaineGroupe }}</td>
                 <td>{{ tarif.weekendEnfant }}</td>
                 <td>{{ tarif.weekendAdulte }}</td>
-                <td>{{ tarif.semaineGroupe }}</td>
                 <td>{{ tarif.weekendGroupe }}</td>
                 <td>
                     <a href="{{ path('tarif_show', {'id': tarif.id}) }}">show</a>

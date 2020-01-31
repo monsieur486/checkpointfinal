@@ -21,10 +21,10 @@
         {% for numero in numeros %}
             <tr>
                 <td>{{ numero.id }}</td>
-                <td>{{ numero.actif ? 'Yes' : 'No' }}</td>
+                <td>{{ numero.actif ? 'Oui' : 'Non' }}</td>
                 <td>{{ numero.horaire ? numero.horaire|date('H:i') : '' }}</td>
                 <td>{{ numero.titre }}</td>
-                <td>{{ numero.resume }}</td>
+                <td>{{ numero.resume|raw }}</td>
                 <td>{{ numero.image }}</td>
                 <td>
                     <a href="{{ path('numero_show', {'id': numero.id}) }}">show</a>
