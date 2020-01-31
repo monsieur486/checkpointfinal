@@ -9,6 +9,10 @@
 2. `composer install && yarn install`
 3. `php bin/console doctrine:fixtures:load`
 
+Vous pouvez également trouver le site en ligne :
+
+https://wildcircus.mr486.com/
+
 ### Connexion :
 
 #### Login :
