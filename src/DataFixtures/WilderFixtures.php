@@ -97,7 +97,7 @@ class WilderFixtures extends Fixture implements OrderedFixtureInterface
         $manager->persist($wilder);
 
         $wilder = new Wilder();
-        $wilder->setFirstName('Corrine');
+        $wilder->setFirstName('Corinne');
         $wilder->setImage('https://media-exp1.licdn.com/dms/image/C5603AQH4zhCyEep_IQ/profile-displayphoto-shrink_200_200/0?e=1585785600&v=beta&t=ERum6jKw0m9KSMLraadlzQezJvFnYkS6HxAFYvHdcvA');
         $manager->persist($wilder);
 
