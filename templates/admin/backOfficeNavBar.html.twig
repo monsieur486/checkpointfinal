@@ -1,0 +1,38 @@
+<div class="uk-child-width-1-4@s uk-text-center" uk-grid>
+    <div>
+        <li class="{% if activePage=="BOTarifs" %}uk-active{% else %}degrade{% endif %}">
+            <a  href="{{ path('BOTarifs')}}">
+                <div class="uk-box-shadow-small uk-box-shadow-hover-large uk-padding-small">
+                    Tarifs
+                </div>
+            </a>
+        </li>
+    </div>
+    <div>
+        <li class="{% if activePage=="BOCircuit" %}uk-active{% else %}degrade{% endif %}">
+            <a  href="{{ path('BOCircuit')}}">
+                <div class="uk-box-shadow-small uk-box-shadow-hover-large uk-padding-small">
+                    Circuit
+                </div>
+            </a>
+        </li>
+    </div>
+    <div>
+        <li class="{% if activePage=="BOProgramme" %}uk-active{% else %}degrade{% endif %}">
+            <a  href="{{ path('BOProgramme')}}">
+                <div class="uk-box-shadow-small uk-box-shadow-hover-large uk-padding-small">
+                    Programme
+                </div>
+            </a>
+        </li>
+    </div>
+    <div>
+        <li class="{% if activePage=="BOWilder" %}uk-active{% else %}degrade{% endif %}">
+            <a  href="{{ path('BOProgramme')}}">
+                <div class="uk-box-shadow-small uk-box-shadow-hover-large uk-padding-small">
+                    Wilders
+                </div>
+            </a>
+        </li>
+    </div>
+</div>

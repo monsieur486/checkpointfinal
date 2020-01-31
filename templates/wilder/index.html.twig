@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Wilder index{% endblock %}
+
+{% block body %}
+    <h1>Wilder index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>FirstName</th>
+                <th>Image</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for wilder in wilders %}
+            <tr>
+                <td>{{ wilder.id }}</td>
+                <td>{{ wilder.firstName }}</td>
+                <td>{{ wilder.image }}</td>
+                <td>
+                    <a href="{{ path('wilder_show', {'id': wilder.id}) }}">show</a>
+                    <a href="{{ path('wilder_edit', {'id': wilder.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('wilder_new') }}">Create new</a>
+{% endblock %}
